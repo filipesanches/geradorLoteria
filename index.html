@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador Mega-Sena</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <h2>Mega-Sena</h2>
+  <p>Gerador de Jogos Aleatorio</p>
+  <div>
+    <label for="qntJogos">Escolha a quantidade de jogo(os)</label>
+    <input type="text" name="qntJogos" id="qntJogos">
+    <button>Salvar</button>
+    <p id="qntJogo"></p>
+    <label for="qntNmr">Escolha a quantidade de numeros por jogo</label>
+    <input type="text" name="qntNmr" id="qntNmr">
+    <button>Salvar</button>
+    <p id="qntNmrs"></p>
+    <label for="qntTot">Escolha a quantidade total de numeros do jogo</label>
+    <input type="text" name="qntTot" id="qntTot">
+    <button>Salvar</button>
+    <p id="qntTotal"></p>
+    <button>Gerar Jogos</button>
+  </div>
+
+  <div id="resultado"></div>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="js/js.js"></script>
+</body>
+</html>
