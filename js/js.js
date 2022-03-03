@@ -114,6 +114,6 @@ function jogo() {
   for (var i = 0; i < nmr; i++) {
     novo.push(arr[i]);
   }
-  novo.join(" - ");
+  novo.sort(function(a, b){return a - b});
   document.getElementById("resultado").innerHTML += novo.join(" - ") + "<br>";
 }
