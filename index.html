@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerador Mega-Sena</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-</head>
-<body>
-  <h2>Mega-Sena</h2>
-  <p>Gerador de Jogos Aleatorio</p>
-  <div>
-    <label for="qntJogos">Escolha a quantidade de jogo(os)</label>
-    <input type="text" name="qntJogos" id="qntJogos">
-    <button>Salvar</button>
-    <p id="qntJogo"></p>
-    <label for="qntNmr">Escolha a quantidade de numeros por jogo</label>
-    <input type="text" name="qntNmr" id="qntNmr">
-    <button>Salvar</button>
-    <p id="qntNmrs"></p>
-    <label for="qntTot">Escolha a quantidade total de numeros do jogo</label>
-    <input type="text" name="qntTot" id="qntTot">
-    <button>Salvar</button>
-    <p id="qntTotal"></p>
-    <button>Gerar Jogos</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador Loteria</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-lg">
+      <div class="pb-3">
+        <h2 class="display-1">Loterias</h2>
+        <hr>
+        <p class="display-6">Gerador de Jogos Aleatorio</p>
+      </div>
+      <div class="form-group row">
+        <label for="qntJogos" class="col-sm-2 col-form-label"
+          >Escolha a quantidade de jogo(os)</label
+        >
+        <div class="col-sm-7">
+          <input type="text" name="qntJogos" id="qntJogos" class="form-control"
+          />
+        </div>
+        <p id="qntJogo" class="alert-info  rounded-3"></p>
+        <label for="qntNmr" class="col-sm-2 col-form-label"
+          >Escolha a quantidade de numeros por jogo</label
+        >
+        <div class="col-sm-7">
+          <input type="text" name="qntNmr" id="qntNmr" class="form-control" />
+        </div>
+        <p id="qntNmrs" class="alert-info  rounded-3"></p>
+        <label for="qntTot" class="col-sm-2 col-form-label"
+          >Escolha a quantidade total de numeros</label
+        >
+        <div class="col-sm-7">
+          <input type="text" name="qntTot" id="qntTot" class="form-control" />
+        </div>
+        <p id="qntTotal" class="alert-info  rounded-3"></p>
+        <div>
+          
+        <button id="geraJogos" class="btn btn-primary">Gerar Jogos</button>
+        <button id="reset" class="btn btn-primary">Resetar</button>
+        </div>
+      </div>
 
-  <div id="resultado"></div>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-  <script src="js/js.js"></script>
-</body>
+      <p id="resultado" class="d-inline-block mt-3 bg-success rounded-3 p-2 px-5 text-white" >Resultado</p>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="js/js.js"></script>
+  </body>
 </html>

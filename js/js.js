@@ -1,7 +1,4 @@
-var btnGerarQntJogo = document.getElementsByTagName("button")[0];
-var btnGerarQntNumJogos = document.getElementsByTagName("button")[1];
-var btnGerarNumeroTot = document.getElementsByTagName("button")[2];
-var btnGerarJogo = document.getElementsByTagName("button")[3];
+var btnGerarJogo = document.getElementById("geraJogos");
 var qntJogos = document.getElementById("qntJogos");
 var qntNmr = document.getElementById("qntNmr");
 var qntTot = document.getElementById("qntTot");
@@ -11,27 +8,41 @@ var nmr;
 var totalNmr;
 const arrQntJogos = [];
 /* fim */
-btnGerarQntJogo.addEventListener("click", geraQntJogos);
-btnGerarQntNumJogos.addEventListener("click", geraQntNmr);
-btnGerarNumeroTot.addEventListener("click", geraQntNmrTot);
 btnGerarJogo.addEventListener("click", gera);
 
-
+document.getElementById("reset").addEventListener("click", function () {
+  document.getElementById("qntJogo").innerHTML = "";
+  document.getElementById("qntNmrs").innerHTML = "";
+  document.getElementById("qntTotal").innerHTML = "";
+  document.getElementById("resultado").innerHTML = "Resultado";
+  for (let i = arrQntJogos.length; i > 0; i--) {
+    arrQntJogos.pop();
+  }
+});
 
 function gera() {
-  document.getElementById("resultado").innerHTML = "";
-  arrQntJogos.forEach(jogo);
-  for(let i = arrQntJogos.length; i > 0; i--){
-    arrQntJogos.pop()
+  if (
+    qntJogos.value.length === 0 ||
+    qntNmr.value.length === 0 ||
+    qntTot.value.length === 0
+  ) {
+    alert("Digite os valores");
+  } else if (Number(qntNmr.value) > Number(qntTot.value)) {
+    alert("Em total de numeros digite um numero maior que a quantidade de numeros por jogo");
+  } else {
+    document.getElementById("resultado").innerHTML = "";
+    geraQntJogos();
+    geraQntNmr();
+    geraQntNmrTot();
+    qntJogos.value = "";
+    qntNmr.value = "";
+    qntTot.value = "";
+    arrQntJogos.forEach(jogo);
+    for (let i = arrQntJogos.length; i > 0; i--) {
+      arrQntJogos.pop();
+    }
   }
-  document.getElementById("qntJogo").innerHTML = ""
-  qntJogos.value = ""
-  document.getElementById("qntNmrs").innerHTML = ""
-  qntNmr.value = ""
-  document.getElementById("qntTotal").innerHTML = ""
-  qntTot.value = ""
 }
-
 
 function geraQntJogos() {
   if (
@@ -40,13 +51,12 @@ function geraQntJogos() {
     Number(qntJogos.value) <= 0 ||
     Number(qntJogos.value) > 1000
   ) {
-    alert("Digite uma entrada entre 1 e 1000");
+    alert("Digite uma entrada entre 1 e 1000 para quantidade de Jogos");
     qntJogos.value = "";
   } else {
     totJogos = qntJogos.value;
     let plural = totJogos.length > 1 ? "jogos" : "jogo";
     document.getElementById("qntJogo").innerHTML = totJogos + " " + plural;
-    qntJogos.value = ""
     //totJogos.forEach(jogo)
   }
   for (let i = 0; i < totJogos; i++) {
@@ -60,7 +70,7 @@ function geraQntNmr() {
     isNaN(qntNmr.value) ||
     Number(qntNmr.value) === 0
   ) {
-    alert("Digite uma entrada válida");
+    alert("Digite um numero maior que 0 para quantidade de numeros por jogo");
   } else {
     nmr = qntNmr.value;
     let plural = Number(nmr) > 1 ? "numeros" : "numero";
@@ -75,7 +85,9 @@ function geraQntNmrTot() {
     isNaN(qntTot.value) ||
     Number(qntTot.value) === 0
   ) {
-    alert("Digite uma entrada válida");
+    alert(
+      "Digite um numero maior que 0 \ne maior que a quantidade de numeros por jogo"
+    );
   } else {
     totalNmr = qntTot.value;
     let plural = Number(totalNmr) > 1 ? "numeros" : "numero";
@@ -102,6 +114,6 @@ function jogo() {
   for (var i = 0; i < nmr; i++) {
     novo.push(arr[i]);
   }
-  novo.join(" - ")
+  novo.join(" - ");
   document.getElementById("resultado").innerHTML += novo.join(" - ") + "<br>";
 }
