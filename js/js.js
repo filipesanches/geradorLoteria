@@ -55,7 +55,7 @@ function geraQntJogos() {
     qntJogos.value = "";
   } else {
     totJogos = qntJogos.value;
-    let plural = totJogos.length > 1 ? "jogos" : "jogo";
+    let plural = Number(totJogos) > 1 ? "jogos" : "jogo";
     document.getElementById("qntJogo").innerHTML = totJogos + " " + plural;
     //totJogos.forEach(jogo)
   }
