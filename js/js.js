@@ -115,5 +115,5 @@ function jogo() {
     novo.push(arr[i]);
   }
   novo.sort(function(a, b){return a - b});
-  document.getElementById("resultado").innerHTML += novo.join(" - ") + "<br>";
+  document.getElementById("resultado").innerHTML += novo.join(" - ") + "&#10;";
 }

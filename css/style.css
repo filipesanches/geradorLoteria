@@ -1,0 +1,17 @@
+.rotateIn {
+  display: inline-block;
+  animation: rotateIn 2s infinite;
+  transform-origin: center;
+}
+
+
+@keyframes rotateIn {
+  from {
+    transform: rotate3d(0, 0, 1, 0);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, -360deg);
+    transform: translate3d(0, 0, 200deg);
+  }
+}
