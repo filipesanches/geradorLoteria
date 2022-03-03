@@ -17,33 +17,49 @@
 </head>
 
 <body>
-  <div class="container-lg">
-    <div class="pb-3 bg-dark rounded-3 mb-5 text-white px-5">
-      <h2 class="display-1 pt-3">Loterias &#127808;</h2>
-      <hr />
-      <p class="display-6">Gerador de jogos automático <span class="rotateIn"> &#127922;</span></p>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-lg container-fluid p-0">
+    <div class="pb-3 bg-dark rounded-bottom mb-5 text-white px-5 overflow-hidden">
+      
+      <nav class="navbar  navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Jogos</a>
+          <a class="navbar-brand" href="#"><h2 class="display-1 pt-3">Loterias &#127808;</h2></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Lotofácil</a>
-              <a class="nav-link" href="#">Mega-Sena</a>
-              <a class="nav-link" href="#">Quina</a>
-              <a class="nav-link" href="#">Lotomania</a>
-              <a class="nav-link" href="#">Timemania</a>
-              <a class="nav-link" href="#">Dupla-Sena</a>
-              <a class="nav-link" href="#">Dia de Sorte</a>
-              <a class="nav-link" href="#">Super Sorte</a>
-            </div>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">     
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active btn btn-dark my-2" aria-current="page" href="#">Mega-Sena</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-dark my-2" href="#">Lotofácil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-dark my-2" href="#">Quina</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-dark my-2" href="#">Lotomania</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-dark my-2" href="#">Timemania</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-dark  my-2" href="#">Dupla-Sena</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-dark my-2" href="#">Dia de Sorte</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-dark" href="#">Super Sete</a>
+                </li>
+              </ul>      
           </div>
         </div>
       </nav>
+      <hr />
+      <p class="display-6">Gerador de jogos automático <span class="rotateIn"> &#127922;</span></p>
     </div>
-    <div class="form-group">
+    <div class="form-group container">
       <div class="input-group">
         <label for="qntJogos" class="input-group-text col-12 col-md-6">Escolha a quantidade de jogo(s):</label>
         <input type="text" name="qntJogos" id="qntJogos" class="form-control col-12 col-md-6" />
@@ -71,7 +87,7 @@
         Copiar
       </button>
     </div>
-    <footer class="p-4 bg-dark rounded-3 text-white text-center h5 m-0">Retrolipe &#169;</footer>
+    <footer class="p-4 bg-dark rounded-top text-white text-center h5 m-0">Retrolipe &#169;</footer>
   </div>
 
   <!--
