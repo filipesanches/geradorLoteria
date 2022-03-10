@@ -21,41 +21,44 @@
     <header class="bg-dark rounded-bottom mb-5 text-white p-2">
       <nav class="navbar navbar-expand-xxl  navbar-dark bg-dark p-0 m-0">
         <div class="container-fluid p-0">
-          <a class="navbar-brand" href="index.html"><h2 class="display-3 h2 pt-3">Loterias &#127808;</h2></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="index.html">
+            <h2 class="display-3 h2 pt-3">Loterias &#127808;</h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">     
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active btn btn-dark m-2" href="#">Mega-Sena</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn btn-dark m-2" href="#">Lotofácil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn btn-dark m-2" href="#">Quina</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn btn-dark m-2" href="#">Lotomania</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn btn-dark m-2" href="#">Timemania</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn btn-dark  m-2" href="#">Dupla-Sena</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn btn-dark m-2" href="#">Dia de Sorte</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn btn-dark m-2" href="#">Super Sete</a>
-                </li>
-              </ul>      
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active btn btn-dark m-2" href="#">Mega-Sena</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark m-2" href="#">Lotofácil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark m-2" href="#">Quina</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark m-2" href="#">Lotomania</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark m-2" href="#">Timemania</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark  m-2" href="#">Dupla-Sena</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark m-2" href="#">Dia de Sorte</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark m-2" href="#">Super Sete</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
-      <hr/>
+      <hr />
       <p class="display-6">Gerador de jogos automático <span class="rotateIn"> &#127922;</span></p>
     </header>
     <section class="form-group container">
@@ -90,15 +93,21 @@
   </div>
 
   <!--
+    JavaScript Bootstrap
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    -->
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="js/js.js"></script>
+    crossorigin="anonymous">
+  </script>
+  <!-- 
+    JavaScript clipboard
+    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+
+  <script src="js/megasena.js"></script>
   <script>
     new ClipboardJS(".btnResultado");
   </script>
