@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box !important;
 }
+.bg-mega-sena{
+    background-color: #7bc89b;
+}
+.bg-loto-facil{
+  background-color: #bb84bc;
+}
 .rotateIn {
   display: inline-block;
   animation: rotateIn 2s infinite;
