@@ -4,9 +4,10 @@
   box-sizing: border-box !important;
 }
 .bg-mega-sena{
-    background-color: #7bc89b;
+  background-color: #7bc89b;
 }
 .bg-loto-facil{
+  border-bottom: 2px solid purple;
   background-color: #bb84bc;
 }
 .rotateIn {
