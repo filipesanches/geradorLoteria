@@ -5,7 +5,7 @@ var qntNmrPorJogo = document.getElementById("qntNmr");
 var totJogos;
 var nmr;
 const arrQntJogos = [];
-var qntNmrCartela = 60;
+var qntNmrCartela = 25;
 
 
 //Botao Gerar jogos
@@ -67,10 +67,10 @@ function geraqntNmrPorJogo() {
   if (
     qntNmrPorJogo.value.length <= 0 ||
     isNaN(qntNmrPorJogo.value) ||
-    Number(qntNmrPorJogo.value) < 6 ||
-    Number(qntNmrPorJogo.value) > 15 
+    Number(qntNmrPorJogo.value) < 15 ||
+    Number(qntNmrPorJogo.value) > 20 
   ) {
-    alert("Digite um numero entre 6 e 15 para quantidade de numeros por jogo");
+    alert("Digite um numero entre 15 e 20 para quantidade de numeros por jogo");
     reset()
   } else {
     nmr = qntNmrPorJogo.value;
