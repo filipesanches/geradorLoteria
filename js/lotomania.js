@@ -1,31 +1,27 @@
-document.querySelector(".bg-loto > h2").style.borderColor = "rgb(0 66 30)" //Cor da borda cartão
+document.querySelector(".bg-loto > h2").style.borderColor = "rgb(224 134 26)" //Cor da borda cartão
 
 var btnGerarJogo = document.getElementById("geraJogos");
 var btnReset = document.getElementById("reset");
 var qntJogos = document.getElementById("qntJogos");
-var qntNmrPorJogo = document.getElementById("qntNmr");
+var qntNmrPorJogo = 50;
 var totJogos;
-var nmr;
 const arrQntJogos = [];
-var qntNmrCartela = 60;
+var qntNmrCartela = 100;
 
 
 //Botao Gerar jogos
 btnGerarJogo.addEventListener("click", gera);
 function gera() {
   if (
-    qntJogos.value.length === 0 ||
-    qntNmrPorJogo.value.length === 0
+    qntJogos.value.length === 0
   ) {
     alert("Digite os valores");
-  } else if (Number(qntNmrPorJogo.value) > Number(qntNmrCartela.value)) {
-    alert("Em total de numeros digite um numero maior que a quantidade de numeros por jogo");
   } else {
     document.getElementById("resultado").innerHTML = "";
     geraQntJogos();
-    geraqntNmrPorJogo();
+    //geraqntNmrPorJogo();
     qntJogos.value = "";
-    qntNmrPorJogo.value = "";
+    //qntNmrPorJogo.value = "";
     arrQntJogos.forEach(jogo);
     for (let i = arrQntJogos.length; i > 0; i--) {
       arrQntJogos.pop();
@@ -37,7 +33,7 @@ function gera() {
 btnReset.addEventListener("click", reset);
 function reset() {
   document.getElementById("qntJogo").innerHTML = "";
-  document.getElementById("qntNmrs").innerHTML = "";
+  //document.getElementById("qntNmrs").innerHTML = "";
   document.getElementById("resultado").innerHTML = "Resultado";
   for (let i = arrQntJogos.length; i > 0; i--) {
     arrQntJogos.pop();
@@ -64,15 +60,15 @@ function geraQntJogos() {
     arrQntJogos.push(i);
   }
 }
-
+/*
 function geraqntNmrPorJogo() {
   if (
     qntNmrPorJogo.value.length <= 0 ||
     isNaN(qntNmrPorJogo.value) ||
-    Number(qntNmrPorJogo.value) < 6 ||
-    Number(qntNmrPorJogo.value) > 15 
+    Number(qntNmrPorJogo.value) < 20 ||
+    Number(qntNmrPorJogo.value) > 50 
   ) {
-    alert("Digite um numero entre 6 e 15 para quantidade de numeros por jogo");
+    alert("Digite um numero entre 20 e 50 para quantidade de numeros por jogo");
     reset()
   } else {
     nmr = qntNmrPorJogo.value;
@@ -81,6 +77,7 @@ function geraqntNmrPorJogo() {
     //totJogos.forEach(jogo)
   }
 }
+*/
 
 
 
@@ -88,7 +85,7 @@ function jogo() {
   const novo = [];
   const arr = [];
   for (let i = 0; i < qntNmrCartela; i++) {
-    arr[i] = i + 1;
+    arr[i] = i;
   }
 
   var p, n, tmp;
@@ -99,9 +96,9 @@ function jogo() {
     arr[p] = tmp;
   }
 
-  for (var i = 0; i < nmr; i++) {
+  for (var i = 0; i < qntNmrPorJogo ; i++) {
     novo.push(arr[i]);
   }
   novo.sort(function(a, b){return a - b});
-  document.getElementById("resultado").innerHTML += novo.join(" - ") + "&#10;";
+  document.getElementById("resultado").innerHTML += novo.join(" - ") + "&#10;" + "&#10;";
 }

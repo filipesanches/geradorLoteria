@@ -1,3 +1,5 @@
+document.querySelector(".bg-loto > h2").style.borderColor = "rgb(104 37 113)" //Cor da borda cartão
+
 var btnGerarJogo = document.getElementById("geraJogos");
 var btnReset = document.getElementById("reset");
 var qntJogos = document.getElementById("qntJogos");

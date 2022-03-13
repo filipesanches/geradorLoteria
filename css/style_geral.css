@@ -16,15 +16,12 @@ body{
 .bg-loto h2{
   color: #fff;
   padding: 30px 10px 0 20px;
-  border-bottom: 10px solid rgb(38, 49, 39);
+  border-bottom: 15px solid transparent;
   background: linear-gradient(to right,rgb(0, 97, 40) 10%, rgba(255, 255, 255, 0.419)), url(../img/trevo.jpg)center/cover no-repeat;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
-
-
-
 
 .rotateIn {
   display: inline-block;

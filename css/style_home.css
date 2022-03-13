@@ -23,3 +23,46 @@
 .card:nth-of-type(8) {
   background-color: rgb(152 209 30);
 }
+.secao-aviso{
+  padding: 15px;
+}
+.secao-aviso div{
+  flex-flow:row wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
+  background-color: #005da8;
+  border-radius: 20px;
+  width: 70%;
+  padding: 20px 20px 0 20px;
+}
+.secao-aviso div imgx{
+  border-radius: 0;
+  max-width: 200px;
+  width: 100%;
+  height: 147px;
+  background: linear-gradient(to bottom, transparent 80%, #005da8 99%), url(../img/home-com-sorte.png) center/cover
+
+}
+.secao-aviso p{
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff3cd;
+  
+}
+.secao-aviso p span{
+  display: block;
+  padding: 5px;
+  background-color: brown;
+  border-radius: 10px;
+  color: yellow;
+}
+@media screen and (max-width: 900px) 
+{
+  .secao-aviso div{
+    width: 100%;
+  }
+}

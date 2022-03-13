@@ -1,4 +1,4 @@
-document.querySelector(".bg-loto > h2").style.borderColor = "rgb(0 66 30)" //Cor da borda cartão
+document.querySelector(".bg-loto > h2").style.borderColor = "rgb(62 61 137)" //Cor da borda cartão
 
 var btnGerarJogo = document.getElementById("geraJogos");
 var btnReset = document.getElementById("reset");
@@ -7,7 +7,7 @@ var qntNmrPorJogo = document.getElementById("qntNmr");
 var totJogos;
 var nmr;
 const arrQntJogos = [];
-var qntNmrCartela = 60;
+var qntNmrCartela = 80;
 
 
 //Botao Gerar jogos
@@ -69,10 +69,10 @@ function geraqntNmrPorJogo() {
   if (
     qntNmrPorJogo.value.length <= 0 ||
     isNaN(qntNmrPorJogo.value) ||
-    Number(qntNmrPorJogo.value) < 6 ||
+    Number(qntNmrPorJogo.value) < 5 ||
     Number(qntNmrPorJogo.value) > 15 
   ) {
-    alert("Digite um numero entre 6 e 15 para quantidade de numeros por jogo");
+    alert("Digite um numero entre 5 e 15 para quantidade de numeros por jogo");
     reset()
   } else {
     nmr = qntNmrPorJogo.value;
