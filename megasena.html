@@ -65,33 +65,35 @@
       <hr />
       <p class="display-6">Gerador de jogos automático <span class="rotateIn"> &#127922;</span></p>
     </header>
-    <section class="bg-mega-sena form-group container p-4 my-4 rounded-3">
-      <h2 class="pt-2 m
-      b-4"><img class="me-4 align-bottom m" src="img/mega-sena.png" style="width: 100px;" alt="">Mega-Sena</h2>
-      <p>
-        São realizados dois sorteios semanais para você apostar e torcer para ficar milionário.
-      </p>
-      <div class="input-group  mt-4">
-        <label for="qntJogos" class="input-group-text col-12 col-md-6">Escolha a quantidade de jogo(s):</label>
-        <input type="text" name="qntJogos" id="qntJogos" class="form-control col-12 col-md-6" />
+    <section>
+      <div class="bg-loto form-group container">
+        <h2><img src="img/mega-sena.png" style="width: 100px;" alt="">Mega-Sena</h2>
+        <p>
+          São realizados dois sorteios semanais para você apostar e torcer para ficar milionário.
+        </p>
+        <div class="input-group  mt-4">
+          <label for="qntJogos" class="input-group-text col-12 col-md-6">Escolha a quantidade de jogo(s):</label>
+          <input type="text" name="qntJogos" id="qntJogos" class="form-control col-12 col-md-6" />
+        </div>
+        <p id="qntJogo" class="alert-info rounded-3 px-4"></p>
+  
+        <div class="input-group">
+          <label for="qntNmr" class="input-group-text col-12 col-md-6">Escolha a quantidade de números por jogo:</label>
+          <input type="text" name="qntNmr" id="qntNmr" class="form-control col-12 col-md-6" />
+        </div>
+        <p id="qntNmrs" class="alert-info rounded-3 px-4"></p>
+  
+  
+        <div class="btn-group">
+          <button id="geraJogos" class="btn btn-primary">Gerar Jogos</button>
+          <button id="reset" class="btn btn-danger">Resetar</button>
+        </div>
+        <textarea id="resultado" rows="6" class="mt-3 rounded-3 p-2 form-control">Resultado</textarea>
+        <button class="btnResultado btn btn-primary my-4" data-clipboard-target="#resultado">
+          Copiar
+        </button>
+        
       </div>
-      <p id="qntJogo" class="alert-info rounded-3 px-4"></p>
-
-      <div class="input-group">
-        <label for="qntNmr" class="input-group-text col-12 col-md-6">Escolha a quantidade de números por jogo:</label>
-        <input type="text" name="qntNmr" id="qntNmr" class="form-control col-12 col-md-6" />
-      </div>
-      <p id="qntNmrs" class="alert-info rounded-3 px-4"></p>
-
-
-      <div class="btn-group">
-        <button id="geraJogos" class="btn btn-primary">Gerar Jogos</button>
-        <button id="reset" class="btn btn-danger">Resetar</button>
-      </div>
-      <textarea id="resultado" rows="6" class="mt-3 rounded-3 p-2 form-control">Resultado</textarea>
-      <button class="btnResultado btn btn-primary my-4" data-clipboard-target="#resultado">
-        Copiar
-      </button>
     </section>
     <footer class="p-4 bg-dark rounded-top text-white text-center">
       <p>Retrolipe &#169;</p>

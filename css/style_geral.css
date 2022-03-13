@@ -3,13 +3,29 @@
   padding: 0;
   box-sizing: border-box !important;
 }
-.bg-mega-sena{
-  background-color: #7bc89b;
+body{
+  background-color: #d5d5d5;
 }
-.bg-loto-facil{
-  border-bottom: 2px solid purple;
-  background-color: #bb84bc;
+.bg-loto{
+  padding: 10px;
+  border-radius: 5px;
 }
+.bg-loto img{
+  margin-right: 20px;
+}
+.bg-loto h2{
+  color: #fff;
+  padding: 30px 10px 0 20px;
+  border-bottom: 10px solid rgb(38, 49, 39);
+  background: linear-gradient(to right,rgb(0, 97, 40) 10%, rgba(255, 255, 255, 0.419)), url(../img/trevo.jpg)center/cover no-repeat;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
 .rotateIn {
   display: inline-block;
   animation: rotateIn 2s infinite;
