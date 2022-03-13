@@ -1,0 +1,104 @@
+document.querySelector(".bg-loto > h2").style.borderColor = "rgb(250 228 1)" //Cor da borda cartão
+
+var btnGerarJogo = document.getElementById("geraJogos");
+var btnReset = document.getElementById("reset");
+var qntJogos = document.getElementById("qntJogos");
+var qntNmrPorJogo = 10;
+var totJogos;
+const arrQntJogos = [];
+var qntNmrCartela = 80;
+
+
+//Botao Gerar jogos
+btnGerarJogo.addEventListener("click", gera);
+function gera() {
+  if (
+    qntJogos.value.length === 0
+  ) {
+    alert("Digite os valores");
+  } else {
+    document.getElementById("resultado").innerHTML = "";
+    geraQntJogos();
+    //geraqntNmrPorJogo();
+    qntJogos.value = "";
+    //qntNmrPorJogo.value = "";
+    arrQntJogos.forEach(jogo);
+    for (let i = arrQntJogos.length; i > 0; i--) {
+      arrQntJogos.pop();
+    }
+  }
+}
+
+//Botao resetar
+btnReset.addEventListener("click", reset);
+function reset() {
+  document.getElementById("qntJogo").innerHTML = "";
+  //document.getElementById("qntNmrs").innerHTML = "";
+  document.getElementById("resultado").innerHTML = "Resultado";
+  for (let i = arrQntJogos.length; i > 0; i--) {
+    arrQntJogos.pop();
+  }
+};
+
+function geraQntJogos() {
+  if (
+    qntJogos.value.length <= 0 ||
+    isNaN(qntJogos.value) ||
+    Number(qntJogos.value) <= 0 ||
+    Number(qntJogos.value) > 1000
+  ) {
+    alert("Digite uma entrada entre 1 e 1000 para quantidade de Jogos");
+    qntJogos.value = "";
+    reset()
+  } else {
+    totJogos = qntJogos.value;
+    let plural = Number(totJogos) > 1 ? "jogos" : "jogo";
+    document.getElementById("qntJogo").innerHTML = totJogos + " " + plural;
+    //totJogos.forEach(jogo)
+  }
+  for (let i = 0; i < totJogos; i++) {
+    arrQntJogos.push(i);
+  }
+}
+/*
+function geraqntNmrPorJogo() {
+  if (
+    qntNmrPorJogo.value.length <= 0 ||
+    isNaN(qntNmrPorJogo.value) ||
+    Number(qntNmrPorJogo.value) < 20 ||
+    Number(qntNmrPorJogo.value) > 50 
+  ) {
+    alert("Digite um numero entre 20 e 50 para quantidade de numeros por jogo");
+    reset()
+  } else {
+    nmr = qntNmrPorJogo.value;
+    let plural = Number(nmr) > 1 ? "numeros" : "numero";
+    document.getElementById("qntNmrs").innerHTML = nmr + " " + plural;
+    //totJogos.forEach(jogo)
+  }
+}
+*/
+
+
+
+function jogo() {
+  const novo = [];
+  const arr = [];
+  for (let i = 0; i < qntNmrCartela; i++) {
+    arr[i] = i + 1;
+  }
+
+  var p, n, tmp;
+  for (p = arr.length; p; ) {
+    n = (Math.random() * p--) | 0;
+    tmp = arr[n];
+    arr[n] = arr[p];
+    arr[p] = tmp;
+  }
+
+  for (var i = 0; i < qntNmrPorJogo ; i++) {
+    novo.push(arr[i]);
+  }
+  novo.sort(function(a, b){return a - b});
+  document.getElementById("resultado").innerHTML += novo.join(" - ") + "&#10;" + "&#10;";
+}
