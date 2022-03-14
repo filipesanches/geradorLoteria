@@ -38,6 +38,7 @@
   padding: 20px 20px 0 20px;
 }
 .secao-aviso div imgx{
+  margin-right: 5px;
   border-radius: 0;
   max-width: 200px;
   width: 100%;
@@ -59,10 +60,4 @@
   background-color: brown;
   border-radius: 10px;
   color: yellow;
-}
-@media screen and (max-width: 900px) 
-{
-  .secao-aviso div{
-    width: 100%;
-  }
 }
