@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gerador Loteria - Lotomania</title>
+  <title>Gerador Loteria - Construção</title>
   <!--reset-->
   <link rel="stylesheet" href="node_modules/reset.css/reset.css">
   <!--normalize-->
@@ -23,6 +23,22 @@
   <!--Folha externa-->
   <link rel="stylesheet" href="css/style_geral.css">
   <link rel="shortcut icon" href="img/dados.png" type="image/png">
+  <style>
+    a.btn-warning {
+      overflow: hidden;
+    }
+
+    a.btn-warning span {
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+
+    a.btn-warning:hover span {
+      animation: bounce;
+      animation-duration: 1.5s;
+    }
+    
+  </style>
 </head>
 
 <body>
@@ -49,7 +65,7 @@
                 <a class="nav-link btn btn-dark" href="quina.html"><span>Quina</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active btn btn-dark" href="lotomania.html"><span>Lotomania</span></a>
+                <a class="nav-link btn btn-dark" href="lotomania.html"><span>Lotomania</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link btn btn-dark" href="timemania.html"><span>Timemania</span></a>
@@ -70,29 +86,16 @@
       <hr />
       <p class="display-6">Gerador de jogos automático <span class="rotateIn"> &#127922;</span></p>
     </header>
-    <section>
-      <div class="bg-loto form-group container">
-        <h2><img src="img/lotomania.png" style="width: 100px;" alt="">Lotomania</h2>
-        <p class="alert alert-info mt-4">
-          Você ganha ao acertar 15, 16, 17, 18, 19 ou 20 números.<br>Ou pode ganhar se não acertar nenhum dos 20 números sorteados.
-        </p>
-        <div class="input-group  mt-4">
-          <label for="qntJogos" class="input-group-text col-12 col-md-6">Escolha a quantidade de jogo(s):</label>
-          <input type="text" name="qntJogos" id="qntJogos" class="form-control col-12 col-md-6" />
-        </div>
-        <p id="qntJogo" class="alert-info rounded-3 px-4"></p>
-  
-        <div class="btn-group">
-          <button id="geraJogos" class="btn btn-primary">Gerar Jogos</button>
-          <button id="reset" class="btn btn-danger">Resetar</button>
-        </div>
-        <textarea id="resultado" rows="6" class="mt-3 rounded-3 p-2 form-control">Resultado</textarea>
-        <button class="btnResultado btn btn-primary my-4" data-clipboard-target="#resultado">
-          Copiar
-        </button>
-        
+    <section class="container">
+      <div class="my-5 p-5 bg-primary text-white rounded">
+        <h1 class="my-4">Em construção</h1>
+        <p>Esta página do site ainda não foi desenvolvida.<br>O projeto se encontra no Github</p>
+        <a class="btn btn-warning" href="https://github.com/filipesanches/geradorLoteria">
+          <span>Acessar projeto</span>
+        </a>
       </div>
     </section>
+
     <footer class="p-4 bg-dark rounded-top text-white text-center">
       <p>Retrolipe &#169;</p>
       <p class="btn-group">
@@ -100,7 +103,8 @@
           <i class="fa-brands fa-linkedin"></i>
         </a>&nbsp;
         <a href="" class="btn btn-secondary">Instagram <i class="fa-brands fa-instagram-square"></i></a>&nbsp;
-        <a href="https://wa.me/+5511990215427?text=Gostaria%20de%20solicitar%20um%20orçamento" class="btn btn-secondary">whatsapp <i class="fa-brands fa-whatsapp-square"></i></a>
+        <a href="https://wa.me/+5511990215427?text=Gostaria%20de%20solicitar%20um%20orçamento"
+          class="btn btn-secondary">whatsapp <i class="fa-brands fa-whatsapp-square"></i></a>
       </p>
     </footer>
   </div>
@@ -121,8 +125,6 @@
     new ClipboardJS(".btnResultado");
   </script>
 
-  <!--Script jogo-->
-  <script src="js/lotomania.js"></script>
 </body>
 
 </html>

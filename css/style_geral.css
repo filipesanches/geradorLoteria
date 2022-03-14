@@ -1,23 +1,42 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box !important;
 }
-body{
+
+body {
   background-color: #d5d5d5;
 }
-.bg-loto{
+
+
+li.nav-item a {
+  overflow: hidden;
+}
+
+li.nav-item a span {
+  text-align: center;
+  display: inline-block;
+}
+
+li.nav-item:hover a span {
+  animation: fadeInRightBig;
+  animation-duration: .6s;
+}
+
+.bg-loto {
   padding: 10px;
   border-radius: 5px;
 }
-.bg-loto img{
+
+.bg-loto img {
   margin-right: 20px;
 }
-.bg-loto h2{
+
+.bg-loto h2 {
   color: #fff;
   padding: 30px 10px 0 20px;
   border-bottom: 15px solid transparent;
-  background: linear-gradient(to right,rgb(0, 97, 40) 10%, rgba(255, 255, 255, 0.419)), url(../img/trevo.jpg)center/cover no-repeat;
+  background: linear-gradient(to right, rgb(0, 97, 40) 10%, rgba(255, 255, 255, 0.419)), url(../img/trevo.jpg)center/cover no-repeat;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
