@@ -23,9 +23,6 @@
 .card:nth-of-type(8) {
   background-color: rgb(152 209 30);
 }
-.secao-aviso{
-  padding: 15px;
-}
 .secao-aviso div{
   flex-flow:row wrap;
   display: flex;
@@ -34,7 +31,6 @@
   margin: 10px auto;
   background-color: #005da8;
   border-radius: 20px;
-  width: 70%;
   padding: 20px 20px 0 20px;
 }
 .secao-aviso div imgx{
